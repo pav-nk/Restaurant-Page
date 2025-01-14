@@ -1,0 +1,26 @@
+@use "./reset";
+
+/* colors */
+$color-1: #FFFFFF;
+$color-2: #111111;
+$color-3: #EEEEEE;
+$color-4: #767676;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, system-ui, sans-serif;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1320px;
+}
