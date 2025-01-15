@@ -1,0 +1,3 @@
+function renderContactsPage() {}
+
+export { renderContactsPage };

@@ -1,0 +1,3 @@
+function renderMenuPage() {}
+
+export { renderMenuPage };
