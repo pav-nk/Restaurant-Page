@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/svg/pizza.svg">
     <title>Restaurant-Page</title>
 </head>
 
@@ -12,13 +13,28 @@
     <div class="container">
         <header class="header">
             <nav class="navigation">
-                <button type="button">Home</button>
-                <button type="button">Menu</button>
-                <button type="button">Contact Us</button>
+                <button type="button" class="button button--menu checked">Home</button>
+                <button type="button" class="button button--menu">Menu</button>
+                <button type="button" class="button button--menu">Contact Us</button>
             </nav>
         </header>
-        <div id="content"></div>
-        <footer class="footer"></footer>
+        <div class="content" id="content">
+            <div class="content__main">
+                <img class="logo" src="./assets/svg/pizza.svg" alt="pizza logo">
+                <h1 class="title">Try our pizza!</h1>
+                <p class="text"></p>
+                <button class="button button--main">Discover menu &#8594;</button>
+            </div>
+            <div class="content__img">
+                <img src="./assets/img/home.jpg" alt="home pizza">
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__content">
+                <span>Copyright © 2025</span>
+                <a class="link link--github" href="https://github.com/pav-nk"></a>
+            </div>
+        </footer>
     </div>
 </body>
 
