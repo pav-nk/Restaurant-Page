@@ -26,14 +26,8 @@ function renderHomePage(content) {
   img.src = homeImg;
   img.setAttribute("alt", "home pizza");
 
-  const linkButton = document.createElement("button");
-  linkButton.classList.add("button");
-  linkButton.classList.add("button--main");
-  linkButton.textContent = "Discover menu >";
-
   contentMain.append(imgLogo);
   contentMain.append(h1);
-  contentMain.append(linkButton);
 
   contentImg.append(img);
 

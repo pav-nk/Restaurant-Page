@@ -12,10 +12,43 @@ const buttonHome = document.getElementById("button-home");
 const buttonMenu = document.getElementById("button-menu");
 const buttonContactUs = document.getElementById("button-contacts");
 
+let currentName = "home";
+
+function clearCheckedTab() {
+  [...navigation.querySelectorAll(".button")].forEach((element) => {
+    if (element.classList.contains("checked")) {
+      element.classList.remove("checked");
+    }
+  });
+}
+
+function updateTab(node) {
+  const name = node.dataset.name;
+  if (name === currentName) {
+    return;
+  }
+  currentName = name;
+  clearCheckedTab();
+  node.classList.add("checked");
+}
+
 function runApp() {
   ready(content);
 
-  let currentPage = "home";
+  buttonHome.addEventListener("click", function () {
+    updateTab(this);
+    renderHomePage(content);
+  });
+
+  buttonMenu.addEventListener("click", function () {
+    updateTab(this);
+    renderMenuPage(content);
+  });
+
+  buttonContactUs.addEventListener("click", function () {
+    updateTab(this);
+    renderContactsPage(content);
+  });
 }
 
 runApp();
