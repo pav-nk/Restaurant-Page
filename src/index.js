@@ -36,16 +36,19 @@ function runApp() {
   ready(content);
 
   buttonHome.addEventListener("click", function () {
+    content.innerHTML = "";
     updateTab(this);
     renderHomePage(content);
   });
 
   buttonMenu.addEventListener("click", function () {
+    content.innerHTML = "";
     updateTab(this);
     renderMenuPage(content);
   });
 
   buttonContactUs.addEventListener("click", function () {
+    content.innerHTML = "";
     updateTab(this);
     renderContactsPage(content);
   });

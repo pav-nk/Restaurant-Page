@@ -1,7 +1,6 @@
 import mapImg from "../assets/img/map.jpg";
 
 function renderContactsPage(content) {
-  content.innerHTML = "";
   const wrapper = document.createElement("div");
   wrapper.classList.add("wrapper");
 
@@ -25,6 +24,10 @@ function renderContactsPage(content) {
   wrapper.append(contentImg);
 
   content.append(wrapper);
+
+  setTimeout(() => {
+    wrapper.style.opacity = "1";
+  }, 0);
 }
 
 export { renderContactsPage };

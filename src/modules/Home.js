@@ -1,9 +1,7 @@
 import homeImg from "../assets/img/home.jpg";
 import pizzaImg from "../assets/svg/pizza.svg";
 
-function renderHomePage(content) {
-  content.innerHTML = "";
-
+function renderWrapper() {
   const wrapper = document.createElement("div");
   wrapper.classList.add("wrapper");
 
@@ -34,7 +32,15 @@ function renderHomePage(content) {
   wrapper.append(contentMain);
   wrapper.append(contentImg);
 
+  return wrapper;
+}
+
+function renderHomePage(content) {
+  const wrapper = renderWrapper();
   content.append(wrapper);
+  setTimeout(() => {
+    wrapper.style.opacity = "1";
+  }, 0);
 }
 
 export { renderHomePage };

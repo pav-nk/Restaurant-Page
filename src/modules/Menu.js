@@ -1,7 +1,6 @@
 import menuImg from "../assets/img/menu.jpg";
 
 function renderMenuPage(content) {
-  content.innerHTML = "";
   const wrapper = document.createElement("div");
   wrapper.classList.add("wrapper");
 
@@ -25,6 +24,10 @@ function renderMenuPage(content) {
   wrapper.append(contentImg);
 
   content.append(wrapper);
+
+  setTimeout(() => {
+    wrapper.style.opacity = "1";
+  }, 0);
 }
 
 export { renderMenuPage };
