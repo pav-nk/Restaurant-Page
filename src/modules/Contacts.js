@@ -14,11 +14,25 @@ function renderContactsPage(content) {
   img.src = mapImg;
   img.setAttribute("alt", "map image");
 
-  const description = document.createElement("p");
-  description.textContent = "Our contacts will be here soon...";
+  const subTitle = document.createElement("h2");
+  subTitle.classList.add("sub-title");
+  subTitle.textContent = "Write to us:";
+
+  const tel = document.createElement("p");
+  tel.classList.add("tel");
+  tel.textContent = "+7-(999)-777-77-77";
+
+  const email = document.createElement("a");
+  email.classList.add("email-link");
+  email.setAttribute("href", "mailto:pav_nk@vk.com");
+  email.setAttribute("target", "_blank");
+  email.textContent = "pav_nk@vk.com";
+
+  contentMain.append(subTitle);
+  contentMain.append(tel);
+  contentMain.append(email);
 
   contentImg.append(img);
-  contentMain.append(description);
 
   wrapper.append(contentMain);
   wrapper.append(contentImg);
